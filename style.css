@@ -15,16 +15,23 @@ body {
 }
 
 main {
-	max-width: 1500px;
+	width: 90%;
+	max-width: 1000px;
 	background-color: #fff;
 	padding: 25px 50px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	align-items: center;
 }
 
 main > img {
 	align-self: center;
+}
+
+.summary {
+	text-align: center;
+	margin-top: 30px;
 }
 
 .rules {
@@ -139,6 +146,6 @@ article .payout {
 	position: absolute;
 	top: 5px;
 	left: 5px;
-	color: #ccc;
+	color: #888;
 	font-size: 12px;
 }
