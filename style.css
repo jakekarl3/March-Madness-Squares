@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Graduate&display=swap');
 
+:root {
+	--square-size: 75px;
+}
+
 *,
 *::before,
 *::after {
@@ -50,11 +54,23 @@ article .payout {
 	align-items: center;
 }
 
+.payout h3 {
+	align-self: center;
+}
+
 .board {
 	display: grid;
-	grid-template: repeat(11, 75px) / repeat(11, 75px);
+	grid-template: repeat(11, var(--square-size)) / repeat(11, var(--square-size));
 	font-family: 'Graduate', cursive;
-	transform: translateX(-37px);
+	margin-top: 20px;
+}
+
+.board-title {
+	font-size: 25px;
+}
+
+.board-number {
+	font-size: 15px;
 }
 
 .board-winning {
@@ -62,6 +78,7 @@ article .payout {
 
 	display: grid;
 	grid-template: repeat(2, 1fr) / repeat(10, 1fr);
+	height: var(--square-size);
 }
 
 .board-winning_title {
@@ -72,7 +89,6 @@ article .payout {
 	align-items: center;
 
 	text-transform: uppercase;
-	font-size: 25px;
 }
 
 .board-winning_numbers {
@@ -92,7 +108,8 @@ article .payout {
 	grid-area: 2 / 1 / 12 / 2;
 
 	display: grid;
-	grid-template: repeat(10, 1fr), repeat(2, 1fr);
+	grid-template: repeat(10, var(--square-size)), repeat(2, var(--square-size));
+	width: var(--square-size);
 }
 
 .board-losing_title {
@@ -105,7 +122,6 @@ article .payout {
 	writing-mode: vertical-rl;
 	text-orientation: upright;
 	text-transform: uppercase;
-	font-size: 25px;
 }
 
 .board-losing_numbers {
@@ -131,9 +147,8 @@ article .payout {
 }
 
 .square {
-	height: 10%;
-	width: 10%;
-
+	height: var(--square-size);
+	width: var(--square-size);
 	position: relative;
 	display: flex;
 	justify-content: center;
@@ -143,9 +158,62 @@ article .payout {
 }
 
 .square-number {
+	display: none;
 	position: absolute;
 	top: 5px;
 	left: 5px;
 	color: #888;
 	font-size: 12px;
+}
+
+@media (max-width: 1000px) {
+	:root {
+		--square-size: 70px;
+	}
+}
+
+@media (max-width: 900px) {
+	:root {
+		--square-size: 60px;
+	}
+}
+
+@media (max-width: 750px) {
+	:root {
+		--square-size: 50px;
+	}
+}
+
+@media (max-width: 650px) {
+	:root {
+		--square-size: 40px;
+	}
+
+	.board-title {
+		font-size: 20px;
+	}
+}
+
+@media (max-width: 525px) {
+	:root {
+		--square-size: 30px;
+	}
+
+	.board-title {
+		font-size: 15px;
+	}
+
+	.board-number {
+		font-size: 10px;
+	}
+}
+
+@media (max-width: 400px) {
+	:root {
+		--square-size: 27px;
+	}
+
+	main {
+		padding: 25px 25px;
+	}
 }
