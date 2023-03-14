@@ -35,7 +35,7 @@ main > img {
 
 .summary {
 	text-align: center;
-	margin-top: 30px;
+	/* margin-top: 20px; */
 }
 
 .rules {
@@ -46,6 +46,13 @@ main > img {
 .rules > h3 {
 	margin-left: auto;
 	text-align: center;
+}
+
+article {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 15px;
 }
 
 article .payout {
