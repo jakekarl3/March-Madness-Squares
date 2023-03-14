@@ -173,6 +173,10 @@ article .payout {
 	font-size: 12px;
 }
 
+video {
+	width: 100%;
+}
+
 @media (max-width: 1000px) {
 	:root {
 		--square-size: 70px;
