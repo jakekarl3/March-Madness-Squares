@@ -35,7 +35,6 @@ main > img {
 
 .summary {
 	text-align: center;
-	/* margin-top: 20px; */
 }
 
 .rules {
@@ -163,6 +162,7 @@ article .payout {
 	align-items: center;
 	text-align: center;
 	border: 1px solid black;
+	padding: 3px;
 }
 
 .square-number {
@@ -172,10 +172,14 @@ article .payout {
 	color: #888;
 	font-size: 12px;
 }
-/* 
+
+.square-name {
+	font-size: 13px;
+}
+
 video {
 	width: 100%;
-} */
+}
 
 @media (max-width: 1000px) {
 	:root {
