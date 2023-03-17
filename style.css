@@ -201,36 +201,33 @@ video {
 	text-align: center;
 	margin-bottom: 10px;
 	width: 100%;
-}
-
-.round-payout {
-	margin-bottom: 15px;
+	gap: 15px;
 }
 
 .game {
 	display: flex;
 	justify-content: center;
-	gap: 30px;
 	width: 100%;
+	max-width: 400px;
 }
 
 .score {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
-	gap: 30px;
-	width: 100%;
+	width: 50%;
 }
 
 .team {
 	display: flex;
 	justify-content: space-between;
 	gap: 5px;
-	max-width: 150px;
-	width: 50%;
+	width: 100%;
 }
 
 .winner {
-	display: none;
+	width: 50%;
+	align-self: center;
 }
 
 .hidden {
@@ -336,7 +333,7 @@ video {
 
 	.schedule {
 		font-size: 13px;
-	}
+	}	
 }
 
 @media (max-width: 400px) {
